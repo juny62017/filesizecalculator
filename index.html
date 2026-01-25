@@ -1,86 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    </head>
-    <meta charset="UTF-8">
-    <title>File Size Calculator</title>
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <title>File Size Calculator</title>
+</head>
 
-    <body>
-        <!--HEADER -->
-        <header>
-            <h1>📁 File Size Calculator</h1>
-            <p>
-                A simple web tool to convert file sizes between KB, MB, and GB.
-                Built step by step as a beginner friendly project
-            </p>
-            <hr>
-        </header>
-        <!-- MAIN CONTENT-->
-         <main>
-            <!-- INTRO SECTION -->
-             <section>
-                <h2>About This Tool</h2>
-                <p>
-                    File sizes can be confusing when working with downloads, uploads, or storage limits. This calculator is designed to help users quickly convert values between common file size units.
-                </p>
-                <p>
-                In later stages, this tool will include validation, better UI, and additional features for usability.
-                </p>
-            </section>
-            <hr>
-            <!-- INPUT SECTION -->
-             </section>
-             </h2>enter a numeric value and select the unit you want to convert from.
-            </p>
+<body>
 
-            <label>
-                File Size value :
-                <br>
-                <input type="number" placeholder="e.g. 1024">
-                </label>
-            <br><br>
-            </label>
-            Select unit :
-            <br>
-            </select>
-            <option>KB (KILOBYTES)</option>
-            <option>MB (MEGABYTES)</option>
-            <option>GB (GIGABYTES)</option>
+  <!-- HEADER -->
+  <header>
+    <h1>📁 File Size Calculator</h1>
+    <p>
+      A simple web tool to convert file sizes between KB, MB, and GB.
+      Built step by step as a beginner-friendly project.
+    </p>
+    <hr>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- ABOUT -->
+    <section>
+      <h2>About This Tool</h2>
+      <p>
+        This calculator helps you quickly convert file sizes across common units.
+        It is useful when dealing with downloads, uploads, or storage limits.
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- INPUT SECTION -->
+    <section>
+      <h2>Enter File Size</h2>
+
+      <label>
+        File size value:
+        <br>
+        <input type="number" id="sizeInput" placeholder="e.g. 1024">
+      </label>
+
+      <br><br>
+
+      <label>
+        Select unit:
+        <br>
+        <select id="unitSelect">
+          <option value="KB">KB (Kilobytes)</option>
+          <option value="MB">MB (Megabytes)</option>
+          <option value="GB">GB (Gigabytes)</option>
         </select>
-    </label>
-        <br><br>
-        <button>Convert</button>
-        </section>
-        <hr>
-        <!-- RESULT SECTION -->
-        <section>
-            <h2>Result</h2>
-            <p>
-                The converted file size will be displayed here after calculation.
-            </p>
-            <p>
-                <strong>Result:</strong> --
-            </p>
-            </section>
-            <hr>
+      </label>
 
-            <!-- PLANNED FEATURES -->
-             <section>
-                <h2>Planned Features</h2>
-                <ul>
-                    <li>Accurate file size conersion logic</li>
-                    <li>Input validation for incorrect values</li>
-                    <li>Clean and responsive UI design</li>
-                    <li>Dark mode support</li>
-                    <li>Clear and reset options</li>
-                </ul>
-                </section>
-                </main>
-                <!-- FOOTER -->
-                 <footer>
-                    <p>
-                        FILE SIZE CALCULATOR BUILT AS A LEARNING PROJECT USING HTML CSS AND JAVASCRIPT.
-                    </p>
-                 </footer>
-                 </body>
-                 </html>
+      <br><br>
+
+      <button id="convertBtn">Convert</button>
+    </section>
+
+    <hr>
+
+    <!-- RESULT SECTION -->
+    <section>
+      <h2>Result</h2>
+      <p>
+        <strong>Converted Size:</strong>
+        <span id="resultText">—</span>
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- PLANNED FEATURES -->
+    <section>
+      <h2>Planned Features</h2>
+      <ul>
+        <li>Input validation and clear button</li>
+        <li>Clean and responsive UI</li>
+        <li>Dark mode support</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <hr>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      File Size Calculator — built using HTML, CSS, and JavaScript.
+    </p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
