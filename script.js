@@ -1,21 +1,15 @@
-
 const sizeInput = document.getElementById("sizeInput");
 const unitSelect = document.getElementById("unitSelect");
 const convertBtn = document.getElementById("convertBtn");
 const clearBtn = document.getElementById("clearBtn");
-const resultText = document.getElementById("resultText");
+const resultDiv = document.getElementById("result");
 
 convertBtn.addEventListener("click", () => {
-  const value = Number(sizeInput.value);
+  const value = parseFloat(sizeInput.value);
   const unit = unitSelect.value;
 
-  if (sizeInput.value.trim() === "") {
-    resultText.textContent = "Please enter a value.";
-    return;
-  }
-
-  if (value <= 0) {
-    resultText.textContent = "Value must be greater than zero.";
+  if (isNaN(value) || value <= 0) {
+    resultDiv.textContent = "Please enter a valid number.";
     return;
   }
 
@@ -35,12 +29,14 @@ convertBtn.addEventListener("click", () => {
     gb = value;
   }
 
-  resultText.textContent =
-    `${kb.toFixed(2)} KB | ${mb.toFixed(2)} MB | ${gb.toFixed(4)} GB`;
+  resultDiv.innerHTML = `
+    ${kb.toFixed(2)} KB<br>
+    ${mb.toFixed(2)} MB<br>
+    ${gb.toFixed(4)} GB
+  `;
 });
 
 clearBtn.addEventListener("click", () => {
   sizeInput.value = "";
-  unitSelect.value = "KB";
-  resultText.textContent = "—";
+  resultDiv.textContent = "Result will appear here";
 });
