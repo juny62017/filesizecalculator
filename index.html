@@ -1,104 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>File Size Calculator</title>
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File Size Calculator</title>
 
-</body>
-<!-- HEADER -->
- <header>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
     <h1>📁 File Size Calculator</h1>
-    <p>
-        A simple web tool to convert file sizes between KB, MB, and GB.
-        Build step by step as a beginner friendly project.
+    <p class="subtitle">
+      Convert file sizes between KB, MB, and GB easily.
     </p>
-    <hr>
- </header>
- <!-- MAIN CONTENT -->
-  <main>
-    <!-- ABOUT -->
-     <section>
-        <h2>About This Tool</h2>
-        <p
-            >This tool helps you convert file sizes easily. Whether you're dealing with
-            large files or small ones, this calculator will assist you in converting
-            between kilobytes (KB), megabytes (MB), and gigabytes (GB).
-     </p>
-     </section>
-      
-     <!-- MAIN CONTENT -->
-      <main>
-        <!-- ABOUT -->
-         <section>
-            <h2>About This Tool</h2>
-            <p>
-                This calculator helps you quickly convert files sizes across common units.
-                It is useful when dealing with downloads, uploads, or storage limits.
-            </p>
-            </section>
 
-            <hr>
-            <!-- INPUT SECTION -->
-             <section>
-                <h2>Enter File Size</h2>
-                <label>
-                    File size value:
-                    <br>
-                    <input type ="number" id="sizeinput" placeholder="e.g. 1024">
-                </label>
-                <br><br>
-                <label>
-                    Select unit:
-                    <br>
-                    <select id="unitSelect">
-                        <option value="KB">KB (Kilobytes)</option>
-                        <option value="MB">MB (Megabytes)</option>
-                        <option value="GB">GB (Gigabytes)</option>
-                    </select>
-                </label>
-                <br><br>
-                <button id="convertBtn">convert</button>
-                <button id="clearBtn">clearBtn</button>
-                </section>
-                <hr>
+    <section class="card">
+      <h2>Enter File Size</h2>
 
-                <!-- RESULT SECTION -->
-                 <section>
-                    <h2>Result</h2>
-                    <p>
-                        <strong>Converted Size:</strong>
-                        <span id="resultText">-</span>
-                    </p>
-                 </section>
-                 <hr>
+      <label for="sizeInput">File size value</label>
+      <input
+        type="number"
+        id="sizeInput"
+        placeholder="e.g. 1024"
+      />
 
-                 <!-- PLANNED FEATURES -->
-                  <section>
-                    <h2>Planned Features</h2>
-                    <ul>
-                        <li>Clean and responsive UI</li>
-                        <li>Dark mode support</li>
-                        <li>Better formatting and accessibility</li>
-                        </ul>
-                        </section>
+      <label for="unitSelect">Select unit</label>
+      <select id="unitSelect">
+        <option value="KB">KB (Kilobytes)</option>
+        <option value="MB">MB (Megabytes)</option>
+        <option value="GB">GB (Gigabytes)</option>
+      </select>
 
-                    </maim>
-                    <hr>
+      <div class="buttons">
+        <button id="convertBtn">Convert</button>
+        <button id="clearBtn">Clear</button>
+      </div>
 
-                    <!-- FOOTER -->
-                    <footer>
-                        <p>
-                            File Size Calculator - built using Html, CSS, and javascript.
-                        </p>
-                    </footer>
+      <div id="result" class="result">
+        Result will appear here
+      </div>
+    </section>
 
-                    <script src="script.js"></script>
-                </body>
-                </html>
+    <footer>
+      Built as a beginner-friendly project using HTML, CSS & JavaScript
+    </footer>
+  </div>
 
-                
+  <!-- JS -->
+  <script src="script.js" defer></script>
+</body>
+</html>
 
-
-                
-             
