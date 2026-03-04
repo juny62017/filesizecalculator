@@ -8,53 +8,46 @@ body {
     background-color: #6a5acd;
 }
 
-.main {
+.main-wrapper {
     width: 90%;
-    max-width: 500px;
+    max-width: 550px;
     margin: 60px auto;
 }
 
-h1 {
+header {
     text-align: center;
     color: white;
-    margin-bottom: 5px;
-}
-
-.subtitle {
-    text-align: center;
-    color: #f0f0f0;
     margin-bottom: 20px;
 }
 
-.card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
+.converter-area {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
 }
 
-.input-section {
-    margin-bottom: 15px;
+.field {
+    margin-bottom: 18px;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
-input,
-select {
+input, select {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #999;
+    padding: 10px;
+    border: 1px solid #aaa;
 }
 
-.button-section {
+.buttons {
     margin-top: 10px;
 }
 
 button {
-    padding: 8px 12px;
-    margin-right: 5px;
+    padding: 10px 14px;
+    margin-right: 6px;
     cursor: pointer;
 }
 
@@ -65,12 +58,12 @@ button {
 }
 
 #clearBtn {
-    background-color: #ccc;
+    background-color: #ddd;
     border: none;
 }
 
-.output-section {
+.result-box {
     margin-top: 20px;
-    background-color: #f2f2ff;
-    padding: 12px;
+    padding: 15px;
+    background: #f2f2ff;
 }
