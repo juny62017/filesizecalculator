@@ -1,42 +1,84 @@
-const sizeInput = document.getElementById("sizeInput");
-const unitSelect = document.getElementById("unitSelect");
-const convertBtn = document.getElementById("convertBtn");
-const clearBtn = document.getElementById("clearBtn");
-const resultDiv = document.getElementById("result");
+var sizeInput = document.getElementById("sizeInput");
+var unitSelect = document.getElementById("unitSelect");
+var convertBtn = document.getElementById("convertBtn");
+var clearBtn = document.getElementById("clearBtn");
+var resultDiv = document.getElementById("result");
 
-convertBtn.addEventListener("click", () => {
-  const value = parseFloat(sizeInput.value);
-  const unit = unitSelect.value;
+convertBtn.onclick = function () {
 
-  if (isNaN(value) || value <= 0) {
-    resultDiv.textContent = "Please enter a valid number.";
-    return;
-  }
+    var inputValue = sizeInput.value;
+    var selectedUnit = unitSelect.value;
 
-  let kb, mb, gb;
+    if (inputValue === "") {
+        resultDiv.innerText = "Please enter a value.";
+        return;
+    }
 
-  if (unit === "KB") {
-    kb = value;
-    mb = value / 1024;
-    gb = value / (1024 * 1024);
-  } else if (unit === "MB") {
-    kb = value * 1024;
-    mb = value;
-    gb = value / 1024;
-  } else {
-    kb = value * 1024 * 1024;
-    mb = value * 1024;
-    gb = value;
-  }
+    if (isNaN(inputValue)) {
+        resultDiv.innerText = "Only numbers are allowed.";
+        return;
+    }
 
-  resultDiv.innerHTML = `
-    ${kb.toFixed(2)} KB<br>
-    ${mb.toFixed(2)} MB<br>
-    ${gb.toFixed(4)} GB
-  `;
-});
+    var numberValue = Number(inputValue);
 
-clearBtn.addEventListener("click", () => {
-  sizeInput.value = "";
-  resultDiv.textContent = "Result will appear here";
-});
+    if (numberValue <= 0) {
+        resultDiv.innerText = "Number must be greater than 0.";
+        return;
+    }
+
+    var valueInKB = 0;
+    var valueInMB = 0;
+    var valueInGB = 0;
+
+    if (selectedUnit === "KB") {
+
+        valueInKB = numberValue;
+
+        var tempMB = numberValue / 1024;
+        valueInMB = tempMB;
+
+        var tempGB = tempMB / 1024;
+        valueInGB = tempGB;
+    }
+
+    else if (selectedUnit === "MB") {
+
+        var tempKB = numberValue * 1024;
+        valueInKB = tempKB;
+
+        valueInMB = numberValue;
+
+        var tempGB2 = numberValue / 1024;
+        valueInGB = tempGB2;
+    }
+
+    else if (selectedUnit === "GB") {
+
+        var tempMB3 = numberValue * 1024;
+        valueInMB = tempMB3;
+
+        var tempKB2 = tempMB3 * 1024;
+        valueInKB = tempKB2;
+
+        valueInGB = numberValue;
+    }
+
+    var formattedKB = valueInKB.toFixed(2);
+    var formattedMB = valueInMB.toFixed(2);
+    var formattedGB = valueInGB.toFixed(4);
+
+    var outputText = "";
+    outputText += "Kilobytes: " + formattedKB + " KB <br>";
+    outputText += "Megabytes: " + formattedMB + " MB <br>";
+    outputText += "Gigabytes: " + formattedGB + " GB";
+
+    resultDiv.innerHTML = outputText;
+};
+
+clearBtn.onclick = function () {
+
+    sizeInput.value = "";
+
+    resultDiv.innerText = "Output will show here";
+
+};
