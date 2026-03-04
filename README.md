@@ -1,26 +1,26 @@
-🌸 File Size Calculator
+File Size Calculator
 
 A tiny but useful web tool to convert file sizes between KB, MB, and GB — made with love while learning web development 💻✨
 
-💡 What is this?
+ What is this?
 
 File Size Calculator helps you quickly understand how big a file really is by converting between common units.
-No confusion, no ads, just simple math doing its job 😊
+just simple math doing its job 😊
 
-🛠 Built With
+ Built With
 
-🧱 HTML – structure
+HTML 
 
-🎨 CSS – clean & pleasant UI
+ CSS 
 
-⚙️ JavaScript – conversion logic
+ JavaScript
 
-✨ Features
+Features
 
 Convert KB ↔ MB ↔ GB
 
 Instant results
 
-Beginner-friendly interface
+Beginner friendly interface
 
 Lightweight & fast
