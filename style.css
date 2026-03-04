@@ -1,106 +1,76 @@
 * {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #6a5acd, #836fff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    margin: 0;
+    background-color: #6a5acd;
 }
 
-.container {
-  width: 100%;
-  max-width: 480px;
-  padding: 20px;
+.main {
+    width: 90%;
+    max-width: 500px;
+    margin: 60px auto;
 }
 
 h1 {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 5px;
+    text-align: center;
+    color: white;
+    margin-bottom: 5px;
 }
 
 .subtitle {
-  text-align: center;
-  color: #e0e0ff;
-  margin-bottom: 20px;
+    text-align: center;
+    color: #f0f0f0;
+    margin-bottom: 20px;
 }
 
 .card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-.card h2 {
-  margin-top: 0;
+.input-section {
+    margin-bottom: 15px;
 }
 
 label {
-  display: block;
-  margin-top: 15px;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
 }
 
 input,
 select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #999;
 }
 
-.buttons {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
+.button-section {
+    margin-top: 10px;
 }
 
 button {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
+    padding: 8px 12px;
+    margin-right: 5px;
+    cursor: pointer;
 }
 
 #convertBtn {
-  background-color: #6a5acd;
-  color: #fff;
-}
-
-#convertBtn:hover {
-  background-color: #594bc4;
+    background-color: #5a4fcf;
+    color: white;
+    border: none;
 }
 
 #clearBtn {
-  background-color: #ddd;
+    background-color: #ccc;
+    border: none;
 }
 
-#clearBtn:hover {
-  background-color: #ccc;
-}
-
-.result {
-  margin-top: 20px;
-  padding: 12px;
-  background: #f4f4ff;
-  border-radius: 8px;
-  font-weight: bold;
-  text-align: center;
-}
-
-footer {
-  text-align: center;
-  color: #eee;
-  margin-top: 15px;
-  font-size: 14px;
+.output-section {
+    margin-top: 20px;
+    background-color: #f2f2ff;
+    padding: 12px;
 }
